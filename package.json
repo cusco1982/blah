@@ -1,0 +1,43 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build && npm run seed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "@mdi/font": "^4.5.95",
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "mdi-react": "^6.2.0",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.6",
+    "multer": "^1.4.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react-router-dom": "^5.1.2",
+    "sharp": "^0.23.2",
+    "stripe": "^7.10.0",
+    "uuid": "^3.3.3"
+  }
+}
