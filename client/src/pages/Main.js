@@ -37,28 +37,24 @@ class Main extends Component {
     let path = `/Contact`;
     this.props.history.push(path);
   }
-
-  close = (event) => {
-    if (event) event.preventDefault();
-    this.setState({ showModal: false });
-  }
-
+  // close = (event) => {
+  //   if (event) event.preventDefault();
+  //   this.setState({ showModal: false });
+  // }
   componentDidMount() {
-    this.loadAppart();
+    // this.loadAppart();
   }
+  // loadAppart = () => {
+  //   // API.getAppart()
+  //   // .then(res =>
+  //   //   this.setState({ appartments: res.data })
+  //   // )
+  //   // .catch(err => console.log(err));
+  //   const appartments = API.getAppart()
+  //   this.setState({ appartments: appartments })
+  // };
 
-  loadAppart = () => {
-    // API.getAppart()
-    // .then(res =>
-    //   this.setState({ appartments: res.data })
-    // )
-    // .catch(err => console.log(err));
-
-    const appartments = API.getAppart()
-
-    this.setState({ appartments: appartments })
-
-  };
+  
   render() {
     return (
       <div>
