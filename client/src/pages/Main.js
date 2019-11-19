@@ -1,28 +1,28 @@
 import React, { Component } from "react";
 // import video from "../images/video.mp4";
-import image1 from '../images/1.jpg';
-import image2 from '../images/2.jpg';
-import image3 from '../images/3.jpg';
-import image4 from '../images/4.jpg';
+// import image1 from '../images/1.jpg';
+// import image2 from '../images/2.jpg';
+// import image3 from '../images/3.jpg';
+// import image4 from '../images/4.jpg';
 
 
-const API = {
-  getAppart: () => {
-    return ([{
-      image: image1,
-      title: "New Appartment"
-    }, {
-      image: image2,
-      title: "New Appartment"
-    }, {
-      image: image3,
-      title: "New Appartment"
-    }, {
-      image: image4,
-      title: "New Appartment"
-    }])
-  }
-}
+// const API = {
+//   getAppart: () => {
+//     return ([{
+//       image: image1,
+//       title: "New Appartment"
+//     }, {
+//       image: image2,
+//       title: "New Appartment"
+//     }, {
+//       image: image3,
+//       title: "New Appartment"
+//     }, {
+//       image: image4,
+//       title: "New Appartment"
+//     }])
+//   }
+// }
 
 
 
@@ -54,7 +54,7 @@ class Main extends Component {
   //   this.setState({ appartments: appartments })
   // };
 
-  
+
   render() {
     return (
       <div>

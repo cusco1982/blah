@@ -12,7 +12,7 @@ class Tenant extends Component {
     this.state = {
       showModal: false,
       showModal1: false,
-      appartments: [],
+      apartments: [],
       catchid: "",
       name: "",
       user: ""
@@ -106,11 +106,11 @@ class Tenant extends Component {
             <div className="card-header">
               Your Property Address:
             </div>
-            {this.state.appartments.filter(appartment => {console.log(appartment)
-                return appartment._id === this.state.catchid
-        }).map((appartment) =>{
+            {this.state.apartments.filter(apartment => {console.log(apartment)
+                return apartment._id === this.state.catchid
+        }).map((apartment) =>{
           return <div className="card-body">
-                <h5 className="card-title">{appartment.address}</h5>
+                <h5 className="card-title">{apartment.address}</h5>
               </div>
             })}
         </div>

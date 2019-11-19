@@ -8,7 +8,7 @@ import API from '../utils/API'
 
 class Properties extends Component {
   state = {
-    appartments: [],
+    apartments: [],
     showModal: false,
     catchid: ""
   };
@@ -29,7 +29,7 @@ class Properties extends Component {
   loadAppart = () => {
     API.getUnit().then(res => {
       console.log(res)
-      this.setState({ appartments: res.data })
+      this.setState({ apartments: res.data })
     })
   }
   
@@ -39,13 +39,13 @@ class Properties extends Component {
       <div>
       <div className="container-fluid">
           <div className="row justify-content-center">
-              {this.state.appartments.map(appartment => {console.log(appartment)
+              {this.state.apartments.map(apartment => {console.log(apartment)
                 return <Card   
-                              id={appartment._id} 
-                              address={appartment.address} 
-                              city={appartment.city + ", " + appartment.state + ", " + appartment.zip} 
-                              price={"Price: $" + appartment.price +" | "} 
-                              other={"SqFt: " + appartment.sqFeet + "  |  " + "Rooms: " + appartment.rooms} 
+                              id={apartment._id} 
+                              address={apartment.address} 
+                              city={apartment.city + ", " + apartment.state + ", " + apartment.zip} 
+                              price={"Price: $" + apartment.price +" | "} 
+                              other={"SqFt: " + apartment.sqFeet + "  |  " + "Rooms: " + apartment.rooms} 
                               open={this.open} />
               })}
           </div>
@@ -59,11 +59,11 @@ class Properties extends Component {
         show={this.state.showModal} onHide={this.close}
         aria-labelledby="example-modal-sizes-title-lg">
         <Modal.Header closeButton>
-        {this.state.appartments.filter(appartment => {console.log(appartment)
-                return appartment._id === this.state.catchid
-        }).map((appartment) =>{
+        {this.state.apartments.filter(apartment => {console.log(apartment)
+                return apartment._id === this.state.catchid
+        }).map((apartment) =>{
           return <Modal.Title id="example-modal-sizes-title-lg">
-          <h5>Apply for: {appartment.address}, {appartment.city}, {appartment.state}. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Price: ${appartment.price}</h5>
+          <h5>Apply for: {apartment.address}, {apartment.city}, {apartment.state}. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Price: ${apartment.price}</h5>
           </Modal.Title>
         })}
         </Modal.Header>
