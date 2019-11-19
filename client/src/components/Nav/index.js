@@ -40,6 +40,11 @@ function Nav() {
         <Link className="nav-link" to="/tenants">LOGIN</Link>
     </li>
 
+    <li className="nav-item">
+        <Link className="nav-link" to="/projects">projects</Link>
+    </li>
+    
+
   </ul>
   </div>
   
