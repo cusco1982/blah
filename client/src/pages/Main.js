@@ -10,16 +10,16 @@ import React, { Component } from "react";
 //   getAppart: () => {
 //     return ([{
 //       image: image1,
-//       title: "New Appartment"
+//       title: "New Apartment"
 //     }, {
 //       image: image2,
-//       title: "New Appartment"
+//       title: "New Apartment"
 //     }, {
 //       image: image3,
-//       title: "New Appartment"
+//       title: "New Apartment"
 //     }, {
 //       image: image4,
-//       title: "New Appartment"
+//       title: "New Apartment"
 //     }])
 //   }
 // }
@@ -28,15 +28,15 @@ import React, { Component } from "react";
 
 
 class Main extends Component {
-  state = {
-    appartments: [],
+  // state = {
+  //   apartments: [],
 
-  };
+  // };
 
-  open = () => {
-    let path = `/Contact`;
-    this.props.history.push(path);
-  }
+  // open = () => {
+  //   let path = `/Contact`;
+  //   this.props.history.push(path);
+  // }
   // close = (event) => {
   //   if (event) event.preventDefault();
   //   this.setState({ showModal: false });
@@ -47,18 +47,18 @@ class Main extends Component {
   // loadAppart = () => {
   //   // API.getAppart()
   //   // .then(res =>
-  //   //   this.setState({ appartments: res.data })
+  //   //   this.setState({ apartments: res.data })
   //   // )
   //   // .catch(err => console.log(err));
-  //   const appartments = API.getAppart()
-  //   this.setState({ appartments: appartments })
+  //   const apartments = API.getAppart()
+  //   this.setState({ apartments: apartments })
   // };
 
 
   render() {
     return (
       <div>
-
+Main page component
         {/* <div className="container-fluid"> */}
           {/* <video autoPlay muted loop id="myVideo">
             <source src={video} type="video/mp4" />
