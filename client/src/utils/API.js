@@ -5,10 +5,9 @@ export default {
   login: function() {
     return axios.post("/api/login/");
   },
-  // Gets the book with the given id
-  contact: function(id) {
-    return axios.get("/api/contact/" + id);
-  },
+  // contact: function(id) {
+    // return axios.get("/api/contact/" + id);
+  // },
   
   // Saves a book to the database
   saveBook: function(bookData) {
